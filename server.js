@@ -9,10 +9,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-// ✅ connect to MongoDB
+// connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ Connected to MongoDB Atlas'))
-  .catch(err => console.error('❌ MongoDB connection error:', err));
+  .then(() => console.log(' Connected to MongoDB Atlas'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 // schema
 const UserSearch = mongoose.model('UserSearch', new mongoose.Schema({
@@ -22,13 +22,13 @@ const UserSearch = mongoose.model('UserSearch', new mongoose.Schema({
 
 // simple route
 app.get('/', (req, res) => {
-    res.send('✅ Backend is running!');
+    res.send('Backend is running!');
 });
 
 // main API endpoint
 app.post('/api/user', async (req, res) => {
     const { username } = req.body;
-    console.log("📥 Received request with username:", username);
+    console.log("Received request with username:", username);
 
     if (!username) return res.status(400).json({ error: 'Username is required' });
 
@@ -40,7 +40,7 @@ app.post('/api/user', async (req, res) => {
         if (!response.ok) throw new Error('Failed to fetch from LeetCode API');
 
         const data = await response.json();
-        console.log("✅ Fetched data:", data); // optional: to see what data comes
+        console.log("Fetched data:", data); // optional: to see what data comes
         res.json(data);
     } catch (error) {
         console.error('Error:', error);
@@ -48,7 +48,7 @@ app.post('/api/user', async (req, res) => {
     }
 });
 
-// start server
+
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
 });
