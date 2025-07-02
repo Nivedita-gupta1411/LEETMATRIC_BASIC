@@ -1,0 +1,102 @@
+.container{
+    width:97vw ;
+    /* height:max-content ; */
+    /* background-color: rgb(55, 41, 69); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+   background-color: rgb(27, 21, 66);
+}
+ 
+.maincontainer{
+    flex-wrap: wrap;
+    width:650px ;
+    /* height:max-content; */
+    margin:5rem ;
+    /* padding: 3rem; */
+    /* border: 4px solid rgb(3, 3, 4); */
+    border-radius: 6px;
+    background-color: rgb(82, 79, 79);
+}
+header{
+    margin: 0.5rem;
+    text-align: center;
+    color: azure;
+}
+.user{ 
+     margin: 1rem; 
+     margin-right: 4rem;
+     margin-left: 4rem;
+     /* border: 1px solid black; */
+    gap: 6px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#username{
+    width:17rem; height:23px;
+}
+#button{
+    width: 5rem;
+    height: 23px;
+}
+p{
+    /* padding: 3px; */
+    color: azure;
+    margin: 8px;
+    /* margin-left: 4rem; */
+}
+.stock{
+    margin-top:0%;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 4px;
+    /* background-color: aqua; */
+
+}
+.dabba{
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 2rem;
+    height: 120px;
+    width: 120px;
+    border: 4px solid rgb(133, 144, 147);
+    /* background-color: rgb(15, 106, 106); */ 
+    border-radius: 50%;
+    background: conic-gradient( rgb(82, 135, 147)  var(--progress-degree,0%),rgb(6, 52, 62) 0%) ;
+    padding-bottom: 9px;
+    
+}
+.dabba0{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    display: flex;
+    /* grid-template-columns: repeat(70px,2); */
+    background-color: rgb(228, 124, 75);
+    width: 250px;
+    /* height: 100px; */
+    color: black;
+    /* border: 2px solid white; */
+    border-radius: 4px;
+    margin: 4px;
+    gap: 1rem;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    font-family: Arial, sans-serif;
+}
+#card-container{
+    background-color:rgb(82, 79, 79);
+    width:fit-content;
+}
